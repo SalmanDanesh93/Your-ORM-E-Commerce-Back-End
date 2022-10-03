@@ -11,10 +11,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@work.github.com:coding-boot-camp/module-13-challenge-orm.git"
+    "url": "https://github.com/SalmanDanesh93/Your-ORM-E-Commerce-Back-End.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Salman Danesh",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^2.0.3"
