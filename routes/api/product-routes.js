@@ -133,7 +133,7 @@ router.put('/:id', (req, res) => {
     });
 });
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id', async (req, res) => {
   // delete one product by its `id` value
   Product.destroy({
     where: {
@@ -143,6 +143,9 @@ router.delete('/:id', (req, res) => {
   .then(dbProductData => {
     if(!dbProductData) {
       res.status(404).json({message: 'No product found with this id'});
+      
+      Product.destroy({ where: { id: Product } })
+
       return;
     }
     res.json(dbProductData);
